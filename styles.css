@@ -1,0 +1,1037 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+:root {
+    /* COLORS*/
+    --primaryDark: #201D27;
+    --secondary-dark: #0B0819;
+    --dark-blue: #252525;
+    --black: #000;
+    --success: #29A643;
+    --light-success: #B1FFC2;
+    --very-light-success: #F3FEF4;
+    --danger: #D51820;
+    --light-danger: #FFA3A6;
+    --primaryGray: #444444;
+    --secondaryGray: #888888;
+    --thirdGray: #dadada;
+    --controlsGray: #959595;
+    --footer-icon-gray: #BDBDBD;
+    --lightGray: #f4f4f4;
+    --secondary-lightGray: #ddd;
+    --disabled-color: #ccc;
+    --white: #fff;
+
+    /* GRADIENT COLORS */
+    --dark-gradient: linear-gradient(180deg, rgba(32, 46, 71, 0.65) 36.53%, rgba(32, 46, 71, 0.6175) 57.69%, rgba(32, 46, 71, 0.585) 78.84%, rgba(32, 46, 71, 0) 100%);
+
+    /* TYPOGRAPHY CLAMP*/
+    --huge-title: clamp(2.1875rem, 1.1648rem + 5.1136vw, 5rem);
+    --h1: clamp(1.75rem, 1.5909rem + 0.7955vw, 2.1875rem);
+    --h2: clamp(1.5rem, 1.2727rem + 1.1364vw, 2.125rem);
+    --h3: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5625rem);
+    --h4: 19px;
+    --h5: 16px;
+    --h6: 15px;
+
+    /* SECTION WIDTH */
+    --container-xl: 1140px;
+    --container-lg: 960px;
+    --container-md: 720px;
+    --container-sm: 540px;
+    --container-xs: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    background-color: var(--primaryDark);
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* HEADER */
+header {
+    background-color: var(--black);
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
+
+
+/* HEADIINGS*/
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2)
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+h6 {
+    font-size: var(--h6);
+}
+
+p {
+    line-height: 24px;
+}
+
+/* FONT WEIGHTS */
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+a.button {
+    display: block;
+    text-align: center;
+    width: 345px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    background-color: var(--success);
+    color: var(--white);
+    padding: 7px 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-self.center {
+    align-self: center;
+}
+
+.red-color {
+    color: var(--danger);
+}
+
+.light-success {
+    color: var(--light-success);
+}
+
+.light-danger {
+    color: var(--light-danger);
+}
+
+.block {
+    display: block;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 0;
+    width: 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* DIVIDERS */
+.success-divider {
+    border: 2px solid var(--success);
+    width: 70px;
+}
+
+.danger-divider {
+    border: 2px solid var(--danger);
+    width: 70px;
+    margin-bottom: 40px;
+}
+
+/*HEADER*/
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    display: block;
+}
+
+header nav a img {
+    width: 140px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+header nav ul a {
+    color: var(--white);
+}
+
+/*HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 112px);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(32, 46, 71, 0.65) 36.53%, rgba(32, 46, 71, 0.6175) 57.69%, rgba(32, 46, 71, 0.585) 78.84%, rgba(32, 46, 71, 0) 100%);
+    mix-blend-mode: multiply;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hero .hero-zero {
+    position: absolute;
+    top: 0;
+    left: 400px;
+    width: 300px;
+}
+
+.hero .hero-cup {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    width: 160px;
+}
+
+.hero .hero-gold-num {
+    position: absolute;
+    bottom: 50%;
+    right: -250px;
+    transform: translateY(50%);
+    width: 500px;
+}
+
+.hero .hero-light-cube{
+    position: absolute;
+    bottom: -20px;
+    right: 200px;
+    width: 250px;
+}
+
+.hero .hero-purple-cube {
+    position: absolute;
+    bottom: 30%;
+    left: -150px;
+    width: 350px;
+}
+
+.hero .hero-ring {
+    position: absolute;
+    bottom: 50px;
+    left: 300px;
+    width: 100px;
+}
+
+.hero .purple-shadow {
+    position: absolute;
+    top: -10%;
+    left: -20%;
+    width: 50%;
+    height: 100%;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    z-index: 2;
+    mix-blend-mode: normal;
+}
+
+.hero h5 {
+    color: var(--secondary-lightGray);
+}
+
+.hero .hero-description {
+    width: 460px;
+}
+
+
+/*Crypto*/
+
+.coins .blue-shadow {
+    background: rgba(18, 144, 136, 0.35);
+    filter: blur(200px);
+    transform: rotate(-180deg);
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 30%;
+    height: 200px;
+    z-index: -1;
+}
+
+.coins .snake-icon {
+    position: absolute;
+    top: -100px;
+    right: 0;
+}
+
+.coins .snake-tablet-icon {
+    display: none;
+}
+
+.coins .hero-gold-num{
+    display: none;
+}
+
+.crypto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.crypto-coins {
+    padding: 20px;
+    background: rgba(140, 140, 140, 0.1);
+    mix-blend-mode: normal;
+    border: 1px solid rgba(167, 167, 167, 0.2);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: calc((100% / 5) - 18px);
+}
+
+.coin-symbol-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.coin-symbol-name img {
+    width: 33px;
+}
+
+.coin-symbol-name .coin-name{
+    font-size: 9px;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 4px;
+    border-radius: 4px;
+
+}
+
+.crypto-coins hr {
+    border: 2px solid var(--white);
+    opacity: 0.15;
+}
+
+.coin-price-percentage h4 {
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 65.8195px #FFC255;
+}
+
+.coin-price-percentage span  i{
+    font-size: 9px;
+}
+
+.coin-price-percentage span{
+    font-size: 13px;
+}
+
+/* TRADING */
+.trading {
+    align-items: center;
+    gap: 40px;
+}
+
+.trading-section .zero-icon {
+    position: absolute;
+    top: -100px;
+    left: -270px;
+    width: 590px;
+    height: 726px;
+    z-index:-1;
+}
+
+.trading-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.trading-intro p {
+    width: 70%;
+}
+
+.trading-features{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.trading-features .col {
+    padding: 50px;
+    background-color: var(--secondary-dark);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.trading-features .col-1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    justify-content: space-between;
+}
+
+.trading-features .col .content {
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+
+.trading-features .col-1 img {
+    width: 100px;
+    height: 212px;
+}
+
+.trading-features .col-2 {
+    grid-column: 2 / 4;
+}
+
+.trading-features .col-2 img,
+.trading-features .col-3 img,
+.trading-features .col-4 img {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 72px;
+}
+
+.trading-features h3 {
+    width: 100%;
+}
+
+/* REGISTER */
+.register .container {
+    align-items: center;
+    gap: 60px;
+}
+
+.register-intro h2 {
+    margin-bottom: 40px;
+}
+
+.register-schedule {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.register-schedule div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.register-schedule div i {
+    font-size: 26px;
+}
+
+.register-schedule__time {
+    border-left: 1px solid var(--white);
+    border-right: 1px solid var(--white);
+}
+
+.register-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.register-inputs div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.register-inputs__password ul li {
+    color: var(--controlsGray);
+    margin-bottom: 8px;
+}
+
+.register-inputs__password ul li i {
+    margin-right: 20px;
+    font-size: 10px;
+}
+
+.register-inputs input{
+    width: 100%;
+    padding: 12px 6px;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    color: var(--black);
+}
+
+.register-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#emailError {
+    color: var(--danger);
+    display: none;
+}
+
+#registerButton:disabled {
+    text-align: center;
+    width: 345px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    background-color: var(--disabled-color);
+    color: var(--white);
+    padding: 7px 20px;
+    cursor: not-allowed;
+}
+
+#registerButton {
+    text-align: center;
+    width: 345px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    background-color: var(--success);
+    color: var(--white);
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+#successMessage {
+    width: 100%;
+    background-color: var(--very-light-success);
+    color: var(--success);
+    padding: 50px 30px;
+    border: 1px solid var(--success);
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+#successMessage div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.register-success__check i{
+    font-size: 70px;
+}
+
+.register-success__thanks p i {
+    margin-right: 10px;
+}
+
+/* EVENTS */
+.events-gallery {
+    padding: 70px 0;
+    background-color: var(--lightGray);
+}
+
+.events-gallery h2 {
+    color: var(--dark-blue);
+}
+
+.events-carousel {
+    display: flex;
+    gap: 30px;
+  }
+  
+.events-carousel__carousel{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.events-carousel__button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.events-carousel__button i{
+    font-size: 17px;
+    color: var(--controlsGray);
+}
+
+.events-carousel__carousel-inner{
+    display: flex;
+    gap: 30px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 1 0 20%; /* Show 5 cards at desktop */
+    /* Adjust the width percentages based on the desired number of cards */
+    width: 170px;
+    height: 170px;
+    border: 2px solid var(--white);
+    background-color: var(--thirdGray);
+  }
+
+/* BENEFITS */
+.benefits {
+    background-color: var(--white);
+    padding: 90px 0;
+}
+
+.benefits h2,
+.benefits h4 {
+    color: var(--primaryGray);
+}
+
+.benefits p {
+    color: var(--primaryGray);
+}
+
+.benefits .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 170px;
+    row-gap: 90px;
+}
+
+.benefits .benefits-col img {
+    width: 50px;
+}
+
+.benefits .benefits-col-1 {
+    grid-row: 1 / 3;
+}
+
+.benefits .benefits-col-1 h2 {
+    font-size: var(--huge-title);
+    width: 283px;
+    margin-bottom: 56px;
+    
+}
+
+.benefits .benefits-col-1 p {
+    width: 209px;
+}
+
+.benefits .benefits-col-2,
+.benefits .benefits-col-3,
+.benefits .benefits-col-4,
+.benefits .benefits-col-5 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.footer-partners, .footer-gdpr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-partners {
+    border-bottom: 1px solid var(--secondaryGray);
+    padding-bottom: 30px;
+}
+
+.footer-partners__logos{
+    display: flex;
+    gap: 60px;
+}
+
+.footer-partners__socials span {
+    color: var(--secondaryGray);
+    display: flex;
+    gap: 14px;
+}
+
+.footer-partners__socials span i {
+    color: var(--footer-icon-gray);
+}
+
+.footer-partners__logos img {
+    width: 136px;
+    height: 100%;
+}
+
+.footer-gdpr__nav {
+    display:flex;
+}
+
+.footer-gdpr__nav li {
+    font-size: 12px;
+    color: var(--secondaryGray);
+    padding: 0 10px;
+    border-right: 1px solid var(--secondaryGray);
+}
+
+.footer-gdpr__nav li:last-child {
+    border-right: none;
+    padding-right: 0;
+} 
+
+.footer-gdpr__logo {
+    width: 180px;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 80%;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    .hero .hero-zero {
+        top: 0;
+        left: 50px;
+        width: 240px;
+    }
+
+    .hero .hero-cup {
+        width: 102px;
+        top: 50px;
+        right: 50px;
+    }
+
+    .hero .hero-gold-num {
+        width: 300px;
+        right: -140px;
+    }
+
+    .hero .hero-light-cube {
+        width: 180px;
+        right: 50px;
+        bottom: 0;
+    }
+
+    .hero .hero-purple-cube {
+        width: 287px;
+        right: -140px;
+    }
+
+    .hero .hero-ring {
+        width: 90px;
+        left: 100px;
+        bottom: 50px;
+
+    }
+
+    .coins .snake-icon {
+        display: none;
+    }
+
+    .coins .snake-tablet-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .crypto {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 40px;
+    }
+
+    .crypto-coins {
+        width: calc((100% / 3) - 30px);
+    }
+
+
+    .trading-features {
+        grid-template-columns: 1fr;
+    }
+
+    .trading-features .col-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .trading-features .col-1 img {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 72px;
+        height: auto;
+    }
+
+    .trading-features .col-2 {
+        grid-column: 1 / 2;
+    }
+
+    .register-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-item {
+        flex: 1 0 25%; /* Show 4 cards at tablet */
+        /* Adjust the width percentages based on the desired number of cards */
+        width: 130px;
+        height: 130px;
+    }
+
+    .trading-section .zero-icon {
+        width: 377px;
+        height: 465px;
+    }
+
+    .benefits .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefits-col-1 {
+        grid-column: 1 / 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefits .benefits-col-1 h2{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .benefits .benefits-col-1 p{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .footer-partners {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    a.button, #registerButton:disabled, #registerButton {
+        width: 100%;
+    }
+    
+    .container {
+        width: 85%;
+    }
+
+    .hero .hero-ring,
+    .hero .hero-gold-num,
+    .hero .hero-cube-glass,
+    .hero .hero-cup {
+        display: none;
+    }
+
+    .hero .hero-zero {
+        width: 200px;
+        left: -20px;
+    }
+
+    .hero .hero-light-cube {
+        width: 160px;
+        top: 30px;
+        right: -60px;
+    }
+
+    .hero .hero-gold-num {
+        bottom: 130px;
+        width: 240px;
+    }
+
+    .hero .hero-description {
+        width: 100%;
+    }
+
+    .coins {
+        overflow: hidden;
+    }
+
+    .coins .blue-shadow {
+        width: 100px;
+        top: 200px;
+    }
+
+    .coins .hero-gold-num {
+        display: block;
+        position: absolute;
+        width: 200px;
+        top: -30px;
+        right: -75px;
+    }   
+        
+    .coins.snake-icon, .coins .snake-tablet-icon {
+            display: none;
+        }
+
+    .crypto-coins {
+        width: 100%;
+    }
+
+    .trading-intro p {
+        width: 100%;
+    }
+
+    .trading-section .zero-icon {
+        top: 0px;
+        left: -70px;
+        width: 286px;
+        height: 353px;
+    }
+
+    .trading-features .col-1 img {
+        width: 70px;
+        top: 20px;
+        right: 5px;
+    }
+
+    .trading-features .col-2 img,
+    .trading-features .col-3 img,
+    .trading-features .col-4 img {
+        top: 20px;
+        right: 15px;
+        width: 70px;
+    }
+
+    .register-schedule {
+        grid-template-columns: 1fr;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .register-schedule__time {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+
+
+    .benefits .container {
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+
+    .benefits-col {
+        align-items: center;
+    }
+
+    .benefits .benefits-col h4,
+    .benefits .benefits-col p {
+        text-align: center;
+
+    }
+
+    .benefits .benefits-col-1 {
+        grid-column: 1 / 2;
+    }
+
+    .carousel-item {
+        flex: 1 0 50%; /* Show 2 cards at mobile */
+        /* Adjust the width percentages based on the desired number of cards */
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-gdpr {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+
+
+
+
+
+
