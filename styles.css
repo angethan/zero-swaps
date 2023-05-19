@@ -831,6 +831,10 @@ footer {
     .trading-features {
         grid-template-columns: 1fr;
     }
+    
+    .trading-features .col {
+        padding: 40px;
+    }
 
     .trading-features .col-1 {
         grid-column: 1 / 2;
@@ -964,6 +968,10 @@ footer {
         left: -70px;
         width: 286px;
         height: 353px;
+    }
+    
+    .trading-features .col {
+        padding: 30px;
     }
 
     .trading-features .col-1 img {
