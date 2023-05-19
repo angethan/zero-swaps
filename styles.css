@@ -758,7 +758,9 @@ footer {
     height: 100%;
 }
 
-@media (max-width: 1200px) {
+/*TABLET*/
+
+@media (max-width: 1140px) {
     .container {
         width: 80%;
     }
@@ -857,8 +859,7 @@ footer {
     }
 
     .carousel-item {
-        flex: 1 0 25%; /* Show 4 cards at tablet */
-        /* Adjust the width percentages based on the desired number of cards */
+        flex: 1 0 25%;
         width: 130px;
         height: 130px;
     }
@@ -896,7 +897,9 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+/* MOBILE */
+
+@media (max-width: 767px) {
     a.button, #registerButton:disabled, #registerButton {
         width: 100%;
     }
@@ -1016,8 +1019,7 @@ footer {
     }
 
     .carousel-item {
-        flex: 1 0 50%; /* Show 2 cards at mobile */
-        /* Adjust the width percentages based on the desired number of cards */
+        flex: 1 0 50%;
         width: 100px;
         height: 100px;
     }
