@@ -58,18 +58,6 @@ body {
     font-weight: 400;
 }
 
-/* HEADER */
-header {
-    background-color: var(--black);
-    height: 112px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 30px;
-}
-
-
 
 /* HEADIINGS*/
 h1 {
@@ -193,6 +181,17 @@ section {
 }
 
 /*HEADER*/
+
+header {
+    background-color: var(--black);
+    height: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+}
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -755,6 +754,10 @@ footer {
 @media (max-width: 1190px) {
     .container {
         width: 80%;
+    }
+    
+    header {
+        height: 100px;
     }
 
     header nav {
